@@ -6,12 +6,15 @@ import Section from "../components/elements/Section.astro";
 import Subtitle from "../components/elements/Subtitle.astro";
 import TopBar from "../components/TopBar.astro";
 import BottomBar from "../components/BottomBar.astro";
-import ToolCard from '../components/ToolCard.astro'
+import ToolCard from "../components/ToolCard.astro";
+
+import ProjectCard from "../components/ProjectCard.astro";
+import { Project } from "../types/index";
+import projects from "../data/projects.json";
 ---
 
 <Layout title="Somtochukwu">
   <Main>
-
     <TopBar />
 
     {/* Top Section */}
@@ -35,28 +38,32 @@ import ToolCard from '../components/ToolCard.astro'
         Below are some technologies(languages and frameworks) which I use to
         build my projects.
       </Paragraph>
-      <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-5">
-      <ToolCard name="React" />
-      <ToolCard name="Tailwindcss" />
-      <ToolCard name="Node.js" />
-      <ToolCard name="Typescript" />
-      <ToolCard name="MySQL" />
-      <ToolCard name="SQLite" />
-      <ToolCard name="Neovim" />
-      <ToolCard name="Python" />
-      <ToolCard name="Git" />
+      <div
+        class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-5"
+      >
+        <ToolCard name="React" />
+        <ToolCard name="Astro" />
+        <ToolCard name="Tailwindcss" />
+        <ToolCard name="Node.js" />
+        <ToolCard name="Typescript" />
+        <ToolCard name="MySQL" />
+        <ToolCard name="SQLite" />
+        <ToolCard name="Neovim" />
+        <ToolCard name="Python" />
+        <ToolCard name="Git" />
       </div>
- <div class="border-[1px] border-neutral-500 rounded-xl p-4 mt-5">
-          <Paragraph class="prose-sm">
-            Here are other tools I'm currently diving deeper into, intending to
-            build something with them to make my workflow much more efficient.
-          </Paragraph>
-          <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-5">
-            <ToolCard name="Docker" />
-          </div>
+      <div class="border-[1px] border-neutral-500 rounded-xl p-4 mt-5">
+        <Paragraph class="prose-sm">
+          Here are other tools I'm currently diving deeper into, intending to
+          build something with them to make my workflow much more efficient.
+        </Paragraph>
+        <div
+          class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-5"
+        >
+          <ToolCard name="Docker" />
         </div>
+      </div>
     </Section>
-
 
     {/* Projects Section */}
     <Section>
@@ -64,12 +71,21 @@ import ToolCard from '../components/ToolCard.astro'
       <Paragraph>
         In my free time, I try to build things I could use to solve personal
         problems and sometimes just for fun. Here are projects I have worked on
-        for problems I face personally or for the sole aim to know how something works.
+        for problems I face personally or for the sole aim to know how something
+        works.
       </Paragraph>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 lg:gap-8 mt-5"
+      >
+        {
+          (projects as Project[]).map((project) => {
+            return <ProjectCard project={project} />;
+          })
+        }
+      </div>
     </Section>
 
     <BottomBar />
-
   </Main>
 </Layout>
 

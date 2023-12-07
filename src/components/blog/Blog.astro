@@ -1,0 +1,25 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+import Section from "../elements/Section.astro"
+import Paragraph from "../elements/Paragraph.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { blog } = Astro.props;
+---
+
+<article class="border-b-[1px] border-emerald-700 py-4">
+    <Section>
+        <Paragraph class="text-emerald-950 dark:text-slate-200">
+        Lorem Ipsum
+        </Paragraph>
+    </Section>
+  <a href={`/blog/${blog.slug}`}>
+    <h2>{blog.data.title}</h2>
+    <Paragraph class="text-sm">{blog.data.description} | {blog.data.draft}</Paragraph>
+    <span>{blog.data.date.toLocaleString("en-US", { dateStyle: "long" })}</span>
+  </a>
+</article>

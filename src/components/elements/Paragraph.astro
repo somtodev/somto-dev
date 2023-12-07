@@ -1,11 +1,13 @@
 ---
-interface Props{
-    class?: string
+interface Props {
+  class?: string;
 }
 
-const classname = Astro.props.class
+const classname = Astro.props.class;
 ---
 
-<p class={`max-w-none opacity-75 prose prose-neutral my-2 dark:prose-invert ${classname}`}>
+<p
+  class={`max-w-none opacity-75 prose prose-neutral my-2 dark:prose-invert ${classname}`}
+>
   <slot />
 </p>

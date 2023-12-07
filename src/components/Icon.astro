@@ -1,15 +1,15 @@
 ---
-interface Props{
-    name: string,
-    size?: number
+interface Props {
+  name: string;
+  size?: number;
 }
-const {name, size} = Astro.props
+const { name, size } = Astro.props;
 const def_size = size ? size : 20;
 ---
 
 <img
-    height={def_size}
-    width={def_size}
-    alt={name}
-    src={`https://cdn.simpleicons.org/${name}`}
+  height={def_size}
+  width={def_size}
+  alt={name}
+  src={`https://cdn.simpleicons.org/${name}`}
 />

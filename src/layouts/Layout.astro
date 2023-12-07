@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
   description?: string;
@@ -23,6 +24,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta property="og:image" content={image} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="min-h-screen bg-background dark:bg-black">
     <slot />

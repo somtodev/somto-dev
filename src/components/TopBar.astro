@@ -3,13 +3,14 @@ import NavLink from "./NavLink.astro";
 ---
 
 <nav
-  class="flex flex-col items-center justify-start md:flex-row md:items-start md:justify-between"
+  class="flex flex-col items-start justify-start md:flex-row lg:items-center lg:justify-between"
 >
-  <h1
+  <a
+    href="/"
     class="w-full text-xl font-bold text-black lg:text-3xl lg:w-max dark:text-background"
   >
     Somtochukwu
-  </h1>
+  </a>
   <ul class="flex gap-2">
     <NavLink name={"Blog"} />
     <NavLink name={"Resume"} />

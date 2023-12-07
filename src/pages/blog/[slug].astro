@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, CollectionEntry } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../components/elements/Main.astro";
+
+export const getStaticPaths = (async () => {
+  const blogs = await getCollection("blog");
+  const paths = blogs.map((blog) => {
+    return {
+      params: {
+        slug: blog.slug,
+      },
+      props: {
+        blog,
+      },
+    };
+  });
+  return paths;
+}) satisfies GetStaticPaths;
+
+interface Props {
+  blog: CollectionEntry<"blog">;
+}
+
+const { blog } = Astro.props;
+const {title} = blog.data
+const { Content } = await blog.render();
+---
+
+<Layout title={`Blog: ${title}`}>
+    <Main>
+        <div class="text-emerald-950 prose-xl max-w-none dark:text-emerald-200">
+            <Content />
+        </div>
+    </Main>
+</Layout>
+

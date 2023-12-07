@@ -1,9 +1,25 @@
 ---
-import { Image } from "astro:assets";
-import githubIcon from "../assets/images/icons/github-dark.png";
+import Icon from "./Icon.astro";
 ---
 
 <hr class="bg-emerald-100 my-2" />
-<footer class="w-max mx-auto flex gap-2 py-2">
-  <Image width={24} height={24} src={githubIcon} alt="Github" />
+<footer class="w-max mx-auto flex gap-2 py-2 grayscale">
+  <a
+    rel="noreferrer"
+    target="_blank"
+    href="https://github.com/somtodev"
+    title="Github"
+  >
+    <Icon name="github" />
+  </a>
+  <a mailto="leroynnalue65@gmail.com" title="Send Me A Mail">
+    <Icon name="gmail" />
+  </a>
+  <a
+    rel="noreferrer"
+    target="_blank"
+    href="https://www.linkedin.com/in/somtodev/"
+  >
+    <Icon name="linkedin" />
+  </a>
 </footer>

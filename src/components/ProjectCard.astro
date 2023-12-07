@@ -1,0 +1,52 @@
+---
+import { Project } from "../types/index";
+import Icon from "./Icon.astro";
+import Paragraph from "./elements/Paragraph.astro";
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { name, description, image, github, url, status } = project;
+---
+
+<div>
+  <div
+    class="relative w-full border border-neutral-900 aspect-[1.5] overflow-hidden rounded-lg cursor-pointer"
+  >
+    <img
+      src={`/projects/${image}`}
+      class="w-full h-full hover:scale-125 object-cover object-center transition-all"
+    />
+  </div>
+  <div class="my-2 text-white">
+    <h3 class="text-sm">{name}</h3>
+    <Paragraph class="text-xs">{description}</Paragraph>
+    <div class="flex justify-between mt-auto">
+      {
+        url ? (
+          <a
+            href={url}
+            class="flex gap-2 items-center text-xs bg-emerald-800 cursor-pointer bg-opacity-40 rounded-sm px-[.4em] py-[.24em]"
+          >
+            Live
+          </a>
+        ) : (
+          ""
+        )
+      }
+      {
+        github ? (
+          <a
+            href={url}
+            class="text-xs bg-emerald-800 cursor-pointer rounded-sm px-[.4em] py-[.24em]"
+          >
+            Repo
+          </a>
+        ) : (
+          ""
+        )
+      }
+    </div>
+  </div>
+</div>
