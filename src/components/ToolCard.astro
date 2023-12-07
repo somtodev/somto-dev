@@ -1,0 +1,17 @@
+---
+interface Props {
+    name: string
+}
+
+import Icon from "./Icon.astro";
+import Paragraph from './elements/Paragraph.astro'
+
+const {name} = Astro.props
+---
+
+<div class="flex items-center justify-start gap-2 hover:opacity-75 cursor-pointer px-1 py-2">
+	<div class="w-6 lg:w-5 aspect-square">
+        <Icon name={name} />
+	</div>
+    <Paragraph class={'prose-sm'}>{name}</Paragraph>
+</div>

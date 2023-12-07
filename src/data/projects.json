@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Nota",
+    "description": "My personal note taking application to sync across my devices",
+    "status": "DEVELOPMENT",
+    "image": "nota.png",
+    "github": "https://github.com/somtodev/nota"
+  },
+
+  {
+    "name": "Blogga",
+    "description": "Your personal minimalist blogging website...",
+    "image": "blogga.png",
+    "website": "http://blogga.rf.gd",
+    "github": "https://github.com/somtodev/blogga"
+  },
+  {
+    "name": "Quik Drop",
+    "description": "Seemless file transfer from pc to mobile devices with Quik Drop without usage of data.",
+    "image": "quik-drop.png",
+    "status": "ARCHIVED",
+    "github": "https://github.com/somtodev/quik-drop"
+  }
+]
