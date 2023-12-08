@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getCollection, CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/elements/Main.astro";
@@ -31,6 +31,8 @@ const { Content } = await blog.render();
 
 <Layout title={`Blog: ${title}`}>
   <Main>
+    <a href="/blog" class="font-bold text-white text-md"> &lt; Go Back</a>
+    <hr class="py-2 mb-4" />
     <div class="text-emerald-950 prose-xl max-w-none dark:text-emerald-200">
       <Content />
     </div>

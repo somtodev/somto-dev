@@ -26,6 +26,8 @@ const { name, description, image, github, url, status } = project;
       {
         url ? (
           <a
+            rel="noreferrer"
+            target="_blank"
             href={url}
             class="flex gap-2 items-center text-xs bg-emerald-800 cursor-pointer bg-opacity-40 rounded-sm px-[.4em] py-[.24em]"
           >
@@ -38,7 +40,9 @@ const { name, description, image, github, url, status } = project;
       {
         github ? (
           <a
-            href={url}
+            rel="noreferrer"
+            target="_blank"
+            href={github}
             class="text-xs bg-emerald-800 cursor-pointer rounded-sm px-[.4em] py-[.24em]"
           >
             Repo

@@ -1,7 +1,11 @@
 ---
+interface Props {
+    class: string
+}
 
+const classname = Astro.props.class
 ---
 
-<main class="w-5/6 py-6 mx-auto lg:w-2/4">
+<main class={`w-5/6 py-6 mx-auto ${classname} lg:w-2/4`}>
   <slot />
 </main>

@@ -5,6 +5,7 @@ import Main from "../components/elements/Main.astro";
 import Section from "../components/elements/Section.astro";
 import BlogList from "../components/blog/BlogList.astro";
 import TopBar from "../components/TopBar.astro";
+import Subtitle from "../components/elements/Subtitle.astro";
 
 const blogs = await getCollection("blog");
 ---
@@ -12,8 +13,16 @@ const blogs = await getCollection("blog");
 <Layout title="Blog">
   <Main>
     <TopBar />
-    <Section>
-      <BlogList blogs={blogs} />
-    </Section>
+    {
+      blogs ? (
+        <Section>
+          <BlogList blogs={blogs} />
+        </Section>
+      ) : (
+        <Section class="h-screen flex justify-center opacity-40 items-center mt-auto">
+          <Subtitle>No Blog Post Available</Subtitle>
+        </Section>
+      )
+    }
   </Main>
 </Layout>

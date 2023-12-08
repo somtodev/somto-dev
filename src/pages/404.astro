@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/elements/Paragraph.astro";
+import Main from "../components/elements/Main.astro";
+import Section from "../components/elements/Section.astro";
+import Subtitle from "../components/elements/Subtitle.astro";
+---
+
+<Layout title="Somtochukwu">
+  <Main class="min-h-screen flex items-center justify-center"}>
+    <Section class="w-full">
+        <Subtitle>404</Subtitle>
+        <Paragraph>Ops, page not found</Paragraph>
+        <a href="..">
+            <Paragraph class="text-sm italic">Back</Paragraph>
+        </a>
+    </Section>
+ </Main>
+</Layout>

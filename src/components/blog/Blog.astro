@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry } from "astro:content";
 
-import Section from "../elements/Section.astro"
+import Section from "../elements/Section.astro";
 import Paragraph from "../elements/Paragraph.astro";
 
 interface Props {
@@ -11,13 +11,17 @@ interface Props {
 const { blog } = Astro.props;
 ---
 
-<article class="border-y-[1px] border-emerald-700 py-4 text-white">
-  <a href={`/blog/${blog.slug}`} class="grid grid-cols-1 items-center justify-start lg:grid-cols-6">
-    <Paragraph class="lg:col-span-2">{blog.data.date.toLocaleString("en-US", { dateStyle: "long" })}</Paragraph>
-    <div class="lg:col-span-3">
-    <h2>{blog.data.title}</h2>
-    <Paragraph class="line-clamp-3">{blog.data.description}</Paragraph>
-    <span>Read more</span>
-    </div>
-  </a>
+<article
+  class="border-y-[1px] border-emerald-700 py-4 text-white grid grid-cols-1 items-center justify-start lg:grid-cols-6"
+>
+  <Paragraph class="lg:col-span-2">
+    {blog.data.date.toLocaleString("en-US", { dateStyle: "long" })}
+  </Paragraph>
+  <div class="lg:col-span-3">
+    <a href={`/blog/${blog.slug}`}>
+      <h2>{blog.data.title}</h2>
+      <Paragraph class="line-clamp-3">{blog.data.description}</Paragraph>
+      <span>Read more</span>
+    </a>
+  </div>
 </article>
