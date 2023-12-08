@@ -11,15 +11,13 @@ interface Props {
 const { blog } = Astro.props;
 ---
 
-<article class="border-b-[1px] border-emerald-700 py-4">
-    <Section>
-        <Paragraph class="text-emerald-950 dark:text-slate-200">
-        Lorem Ipsum
-        </Paragraph>
-    </Section>
-  <a href={`/blog/${blog.slug}`}>
+<article class="border-y-[1px] border-emerald-700 py-4 text-white">
+  <a href={`/blog/${blog.slug}`} class="grid grid-cols-1 items-center justify-start lg:grid-cols-6">
+    <Paragraph class="lg:col-span-2">{blog.data.date.toLocaleString("en-US", { dateStyle: "long" })}</Paragraph>
+    <div class="lg:col-span-3">
     <h2>{blog.data.title}</h2>
-    <Paragraph class="text-sm">{blog.data.description} | {blog.data.draft}</Paragraph>
-    <span>{blog.data.date.toLocaleString("en-US", { dateStyle: "long" })}</span>
+    <Paragraph class="line-clamp-3">{blog.data.description}</Paragraph>
+    <span>Read more</span>
+    </div>
   </a>
 </article>
