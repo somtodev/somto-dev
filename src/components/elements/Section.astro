@@ -1,9 +1,9 @@
 ---
-interface Props{
-    class: string
+interface Props {
+  class?: string;
 }
 
-const classname = Astro.props.class
+const classname = Astro.props.class;
 ---
 
 <section class={`my-8 ${classname}`}>
