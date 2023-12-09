@@ -7,7 +7,9 @@ import BlogList from "../components/blog/BlogList.astro";
 import TopBar from "../components/TopBar.astro";
 import Subtitle from "../components/elements/Subtitle.astro";
 
-const blogs = await getCollection("blog");
+const blogs = await getCollection("blog", ({ data }) => {
+  return data.draft !== true;
+});
 ---
 
 <Layout title="Blog">

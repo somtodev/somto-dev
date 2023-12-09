@@ -10,7 +10,7 @@ export const getStaticPaths = (async () => {
   const paths = blogs.map((blog) => {
     return {
       params: {
-        slug: blog.slug,
+        slug: blog?.slug,
       },
       props: {
         blog,
@@ -25,15 +25,16 @@ interface Props {
 }
 
 const { blog } = Astro.props;
-const { title } = blog.data;
-const { Content } = await blog.render();
+const { title } = blog?.data;
+const { Content } = await blog?.render();
 ---
 
 <Layout title={`Blog: ${title}`}>
   <Main>
-    <a href="/blog" class="font-bold text-white text-md"> &lt; Go Back</a>
-    <hr class="py-2 mb-4" />
-    <div class="text-emerald-950 prose-xl max-w-none dark:text-emerald-200">
+    <a href={"/blog"} class="font-semibold text-white text-md italic"
+      ><h6>Go Back</h6></a
+    >
+    <div class="text-emerald-950 prose-sm max-w-none lg:prose-lg dark:text-emerald-200">
       <Content />
     </div>
   </Main>

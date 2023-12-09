@@ -1,6 +1,5 @@
 ---
-import { Project } from "../types/index";
-import Icon from "./Icon.astro";
+import { type Project } from "../types/index";
 import Paragraph from "./elements/Paragraph.astro";
 interface Props {
   project: Project;
@@ -18,6 +17,15 @@ const { name, description, image, github, url, status } = project;
       src={`/projects/${image}`}
       class="w-full h-full hover:scale-125 object-cover object-center transition-all"
     />
+    {
+      status ? (
+        <span class="absolute bg-neutral-500 text-neutral-200 rounded-sm text-xs px-[.3rem] py-[.24rem] top-0 right-0">
+          {status}
+        </span>
+      ) : (
+        ""
+      )
+    }
   </div>
   <div class="my-2 text-white">
     <h3 class="text-sm">{name}</h3>

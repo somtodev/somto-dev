@@ -7,7 +7,7 @@ export default {
         background: "#FAFAFA",
         black: "#0a0a0a",
         primary: "#22F231",
-        white: "#FAFAFA",
+        white: "#FFFFFF",
         border: "#DDDDDD",
       },
     },

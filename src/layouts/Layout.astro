@@ -1,5 +1,4 @@
 ---
-import Header from "../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 import "../styles/main.css";
 
@@ -7,25 +6,34 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  blog?: boolean;
 }
 
-const {
-  title,
-  description = "A community of music producers and enthusiasts",
-  image = "/images/band.jpg",
-} = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    {/*Meta Tags*/}
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-
+    <meta name="theme-color" content="#0a0a0a" />
     <meta name="generator" content={Astro.generator} />
+
+    {/* Open Graph tags */}
+    <meta property="og:title" content="Somtochukwu" />
+    <meta property="og:description" content="Software Developer" />
     <meta property="og:image" content={image} />
+    <meta property="og:url" content="https://somtodev.brimble.app" />
+
+    {/* Twitter Card tags */}
+    <meta name="twitter:title" content="Somtochukwu" />
+    <meta name="twitter:description" content="Software Developer" />
+    <meta name="twitter:image" content="/profile.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <title>{title}</title>
     <ViewTransitions />
