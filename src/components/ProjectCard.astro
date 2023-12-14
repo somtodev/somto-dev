@@ -27,10 +27,10 @@ const { name, description, image, github, url, status } = project;
       )
     }
   </div>
-  <div class="my-2 text-white">
+  <div class="my-2 text-neutral-800 dark:text-white">
     <h3 class="text-sm">{name}</h3>
-    <Paragraph class="text-xs">{description}</Paragraph>
-    <div class="flex justify-between mt-auto">
+    <Paragraph class="text-xs line-clamp-2">{description}</Paragraph>
+    <div class="flex justify-between my-auto">
       {
         url ? (
           <a

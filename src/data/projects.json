@@ -2,14 +2,14 @@
   {
     "name": "Nota",
     "description": "My personal note taking application to sync across my devices",
-    "status": "DEVELOPMENT",
+    "status": "HALTED",
     "image": "nota.png",
     "github": "https://github.com/somtodev/nota"
   },
 
   {
     "name": "Blogga",
-    "description": "Your personal minimalist blogging website...",
+    "description": "Your personal minimalist markdown blogging website...",
     "image": "blogga.png",
     "url": "http://blogga.rf.gd",
     "github": "https://github.com/somtodev/blogga"
