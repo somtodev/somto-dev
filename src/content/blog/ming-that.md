@@ -2,6 +2,7 @@
 title: Ming that
 description: uploading consistent images with ming
 keywords: ming somtodev ming-that
+draft: true
 date: 12 December 2023
 ---
 
