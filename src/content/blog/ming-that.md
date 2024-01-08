@@ -1,8 +1,9 @@
 ---
 title: Ming that
-description:
+description: asdad
 keywords: ming somtodev ming-that
 date: 12 December 2023
+draft: true
 ---
 
 # Ming that
