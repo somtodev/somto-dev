@@ -10,19 +10,27 @@ import Subtitle from "../components/elements/Subtitle.astro";
 const blogs = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
+
+const sortedBlogs = blogs.sort((prev, next) => prev.data.date > next.data.date)
 ---
 
 <Layout title="Blog">
   <Main>
     <TopBar />
+    <p class="text-white my-3 text-opacity-75">
+    Using words to explain how I feel and what I'd love to share.
+    Find my writings on my next task, my thoughts and also snippets of my life on earth
+    </p>
     {
       blogs.length > 0 ? (
         <Section>
-          <BlogList blogs={blogs} />
+          <BlogList blogs={sortedBlogs} />
         </Section>
       ) : (
         <Section class="h-screen flex justify-center opacity-40 items-center mt-auto">
-          <Subtitle>No Blog Post Available</Subtitle>
+          <Subtitle>
+          {blogs.length < 0 ? "No Blog Post Available" : "Working On Something :)"}
+          </Subtitle>
         </Section>
       )
     }

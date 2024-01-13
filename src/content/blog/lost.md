@@ -1,9 +1,9 @@
 ---
 title: Lost
-description: summary of two years of my life
-date: Sat 9 Dec 2023
+description: finding my way with words
 keywords: somtodev, blog
-draft: false
+date: 13 January 2024
+# draft: true
 ---
 
 What perspective do I stick with?
