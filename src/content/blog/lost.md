@@ -16,7 +16,7 @@ Despite preparing to delve into the MERN world, I paused my journey to learn new
 
 Lately, it's been more about concepts than hands-on coding due to my weak laptop battery and, I confess, my waning will to live. Pardon me; I know this writing is all over the place, but here's my point: "Knowledge isn't meant to be absorbed but should be a constant companion, making her a part of you as you acquire her."
 
-I feel lost because I realize I've filled myself with too much information, simultaneously creating a prison with information I won't be using now. My exploration of Java helped a lot in learning new concepts; I'm particularly enamored with types. I learned MSSQL sometime in 2022 to the start of 2023, failed to apply what I learned, and lost nearly 70% of what I once knew like the back of my hand. The year 2023 has been a roller coaster emotionally, mentally, and in terms of software. However, as I write this, I sense some dots connecting, and my goals are becoming clear once again.
+I feel lost because I realize I've filled myself with too much information, simultaneously creating a prison with information I won't be using now. My exploration of Java helped a lot in learning new concepts; I'm particularly enamored with types. I learned MSSQL sometime in 2022 to the start of 2023, failed to apply what I learned, and lost nearly 70% of what I once knew like the back of my hand. The year 2023 was a roller coaster emotionally, mentally, and in terms of software. However, as I write this, I sense some dots connecting, and my goals are becoming clear once again.
 
 I'll stick with NodeJS for reasons I find acceptable (though I wish I had started with PHP). I'll be glad to learn something new when the need arises. Before you go, I'd like to say:
 
