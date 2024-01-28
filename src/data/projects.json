@@ -1,16 +1,31 @@
 [
   {
-    "name": "Nota",
-    "description": "My personal note taking application to sync across my devices",
-    "status": "HALTED",
-    "image": "nota.png",
-    "github": "https://github.com/somtodev/nota"
-  },
-  {
     "name": "Quik Drop",
-    "description": "Transfer file between your devices with quik drop.",
+    "description": "Transfer files from your laptop to your mobile devices with just one command",
     "image": "quik-drop.png",
     "status": "ARCHIVED",
     "github": "https://github.com/somtodev/quik-drop"
+  },
+  {
+    "name": "Lifeflow",
+    "description": "Blood donation made easier, view & and accept blood donation requests",
+    "image": "cover-1.png",
+    "status": "ARCHIVED",
+    "github": "https://github.com/somtodev/lifeflow"
+  },
+  {
+    "name": "Blogga",
+    "description": "A minimalistic markdown blogging template website, ready to be customized and deploy",
+    "image": "blogga.png",
+    "status": "ARCHIVED",
+    "url": "http://blogga.rf.gd/",
+    "github": "https://github.com/somtodev/blogga"
+  },
+  {
+    "name": "BOM Clearing Consultant",
+    "description": "freelance web development  project for a distinguished logistics firm specialized in delivering comprehensive clearing and forwarding services.",
+    "image": "bom.png",
+    "status": "ARCHIVED",
+    "url": "https://bomclearingconsultant.com/"
   }
 ]
