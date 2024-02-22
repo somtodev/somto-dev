@@ -16,8 +16,9 @@ const blogs = await getCollection("blog", ({ data }) => {
   <Main>
     <TopBar />
     <p class="text-black dark:text-white my-3 text-opacity-75">
-    Using words to explain how I feel and what I'd love to share.
-    Find my writings on my next task, my thoughts and also snippets of my life on earth
+      Using words to explain how I feel and what I'd love to share. Find my
+      writings on my next task, my thoughts and also snippets of my life on
+      earth
     </p>
     {
       blogs.length > 0 ? (
@@ -27,7 +28,9 @@ const blogs = await getCollection("blog", ({ data }) => {
       ) : (
         <Section class="h-screen flex justify-center opacity-40 items-center mt-auto">
           <Subtitle>
-          {blogs.length < 0 ? "No Blog Post Available" : "Working On Something :)"}
+            {blogs.length < 0
+              ? "No Blog Post Available"
+              : "Working On Something :)"}
           </Subtitle>
         </Section>
       )
