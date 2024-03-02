@@ -11,7 +11,9 @@ const blogs = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
 
-let sortedBlogs = blogs?.sort((prev,next) => next.data.date.valueOf() - prev.data.date.valueOf());
+let sortedBlogs = blogs?.sort(
+  (prev, next) => next.data.date.valueOf() - prev.data.date.valueOf(),
+);
 ---
 
 <Layout title="Blog">

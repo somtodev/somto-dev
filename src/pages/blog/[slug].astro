@@ -2,7 +2,6 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/elements/Main.astro";
 
 export const getStaticPaths = (async () => {
@@ -25,21 +24,70 @@ interface Props {
 }
 
 const { blog } = Astro.props;
-const { title } = blog?.data;
+let { title, description, keywords } = blog?.data;
 const { Content } = await blog?.render();
+const metaUrl = new URL(
+  "https://images.pexels.com/photos/4157123/pexels-photo-4157123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+);
+
+if (!title) title = "Somtochukwu";
+if (!description)
+  description =
+    "Platform where I lay my thoughts, feelings, snips of my life, just things I'd love to share....";
+if (!keywords)
+  keywords =
+    "Somtochukwu, somtodev, software developer, leroy, nnalue, developer, java, node, typescript";
 ---
 
-<Layout title={`Blog: ${title}`}>
-  <Main>
-    <a
-      href={"/blog"}
-      class="font-semibold text-neutral-600 text-md italic dark:text-white"
-      ><h6>Go Back</h6></a
-    >
-    <div
-      class="text-emerald-950 prose-sm max-w-none lg:prose-lg dark:text-emerald-200 blog"
-    >
-      <Content />
-    </div>
-  </Main>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Somtochukwu L Nnalue" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google" content="notranslate" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://somtodev.brimble.app" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={metaUrl} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://somtodev.brimble.app" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={metaUrl} />
+
+    <meta property="og:site_name" content="Somtochukwu" />
+    <meta property="og:site" content="Somtochukwu" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={metaUrl} />
+    <meta property="og:url" content="https://somtodev.brimble.app" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-background text-neutral-800 dark:bg-black">
+    <Main>
+      <a
+        href={"/blog"}
+        class="font-semibold text-neutral-600 text-md italic dark:text-white"
+        ><h6>Go Back</h6></a
+      >
+      <div
+        class="text-emerald-950 prose-sm max-w-none lg:prose-lg dark:text-emerald-200 blog"
+      >
+        <Content />
+      </div>
+    </Main>
+  </body>
+</html>

@@ -1,9 +1,8 @@
 ---
 title: Pass Behaviours Not Values
-description: a flexible approach for embracing change in software
+description: a flexible approach ro embracing change in software
 keywords: somtodev, blog, software, behaviour farameterization
 date: 02 March 2024
-# draft: true
 ---
 
 In the software world, the demands of a customer is ever-changing. As a software developer, it's of importance to develop alongside the idea of having change as an inevitable companion.
