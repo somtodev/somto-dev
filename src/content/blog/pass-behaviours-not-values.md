@@ -35,7 +35,7 @@ type Department = "STEM" | "OTHERS";
 ```
 
 For simplicity sake, we have just two departments;
-As a developer, you have being required to write a function to filter each student by department. Easy right, you could simply just have to function to do that. Something like this;
+As a developer, you have being required to write a function to filter each student by department. Easy right, you could simply just create a function to do that. Something like this;
 
 ```
 function filterStudentByDepartment(
@@ -88,7 +88,7 @@ Previously we had to use parameters(values) to solve these given tasks;
 - [**Task A**](#) -> filter students by department
 - [**Task B**]() -> filter students by department and age
 
-Now let's creating those behaviours to solve those tasks:
+Now let's create behaviours to solve those tasks:
 
 ```
 // # TASK A
