@@ -10,6 +10,8 @@ import Subtitle from "../components/elements/Subtitle.astro";
 const blogs = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
+
+let sortedBlogs = blogs?.sort((prev,next) => next.data.date.valueOf() - prev.data.date.valueOf());
 ---
 
 <Layout title="Blog">
@@ -23,12 +25,12 @@ const blogs = await getCollection("blog", ({ data }) => {
     {
       blogs.length > 0 ? (
         <Section>
-          <BlogList blogs={blogs} />
+          <BlogList blogs={sortedBlogs} />
         </Section>
       ) : (
         <Section class="h-screen flex justify-center opacity-40 items-center mt-auto">
           <Subtitle>
-            {blogs.length < 0
+            {sortedBlogs.length < 0
               ? "No Blog Post Available"
               : "Working On Something :)"}
           </Subtitle>
