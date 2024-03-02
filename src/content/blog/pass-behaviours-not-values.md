@@ -1,6 +1,6 @@
 ---
 title: Pass Behaviours Not Values
-description: a flexible approach ro embracing change in software
+description: a flexible approach to help write flexible software
 keywords: somtodev, blog, software, behaviour farameterization
 date: 02 March 2024
 ---
