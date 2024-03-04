@@ -6,6 +6,7 @@ import Section from "../components/elements/Section.astro";
 import BlogList from "../components/blog/BlogList.astro";
 import TopBar from "../components/TopBar.astro";
 import Subtitle from "../components/elements/Subtitle.astro";
+import Paragraph from "../components/elements/Paragraph.astro";
 
 const blogs = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
@@ -19,11 +20,11 @@ let sortedBlogs = blogs?.sort(
 <Layout title="Blog">
   <Main>
     <TopBar />
-    <p class="text-black dark:text-white my-3 text-opacity-75">
+    <Paragraph>
       Using words to explain how I feel and what I'd love to share. Find my
       writings on my next task, my thoughts and also snippets of my life on
       earth
-    </p>
+    </Paragraph>
     {
       blogs.length > 0 ? (
         <Section>

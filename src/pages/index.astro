@@ -20,8 +20,7 @@ import projects from "../data/projects.json";
     {/* Top Section */}
     <Section>
       <Paragraph>
-        Hey there, <br />
-        I am Somtochukwu ( You could call me, Leroy ). A software developer passionate
+        Hello 🖐, I am Somtochukwu. A software developer passionate
         at writing digital solutions to problems (the right way). I'm not a fan of
         abstraction due to my curious mind but I do create one when needed.
         <br />
@@ -64,10 +63,12 @@ import projects from "../data/projects.json";
           build something with them to make my workflow much more efficient.
         </Paragraph>
         <div
-          class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-5"
+          class={`${false ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4' : ''} mt-5 gap-x-6 gap-y-5`}
         >
-          <ToolCard name="Spark" url="https://sparkjava.com/img/logo.svg" />
-          <ToolCard name="Go" />
+        <h6>---</h6>
+        <Paragraph class="text-sm">
+        Currently, I have no technology I am diving deeper into other than my primary stack. I am currently reading more my Typescript and building projects in private... Would share the new tools I venture into, in the future.
+        </Paragraph>
         </div>
       </div>
     </Section>
