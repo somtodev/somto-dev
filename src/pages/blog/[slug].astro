@@ -24,8 +24,9 @@ interface Props {
 }
 
 const { blog } = Astro.props;
-let { title, description, keywords } = blog?.data;
+let { title, description, keywords, date } = blog?.data;
 const { Content } = await blog?.render();
+const formattedDAte = new Date(date).toLocaleString("en-US", { dateStyle: "long" });
 const metaUrl = new URL(
   "https://images.pexels.com/photos/4157123/pexels-photo-4157123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 );
@@ -80,11 +81,15 @@ if (!keywords)
     <Main>
       <a
         href={"/blog"}
-        class="font-semibold text-neutral-600 text-md italic dark:text-white"
+        class="text-green-600 text-sm  dark:text-white"
         ><h6>Go Back</h6></a
       >
+      <div class="my-3">
+      <h1 class="text-3xl text-white">{title}</h1>
+      <p class="text-sm text-opacity-60 text-white">{`${formattedDAte}`}</p>
+      </div>
       <div
-        class="text-emerald-950 prose-sm max-w-none lg:prose-lg dark:text-emerald-200 blog"
+        class="text-emerald-950 prose-sm max-w-none dark:text-emerald-200 blog"
       >
         <Content />
       </div>
